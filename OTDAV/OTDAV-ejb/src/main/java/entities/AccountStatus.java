@@ -1,5 +1,5 @@
 package entities;
 
-public enum AccountStatus {
+public enum AccountStatus { //-----------------
 	activated, desactivated, waitingForConfirmation, blocked
 }
