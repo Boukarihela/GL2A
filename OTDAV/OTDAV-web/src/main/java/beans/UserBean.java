@@ -30,7 +30,7 @@ public class UserBean {
 	private Role role; 
 	private Integer UserIdTobeUpdated; 
 	//***
-	
+//cc commit hela	
 	@EJB
 	UserServices us; 
 	
