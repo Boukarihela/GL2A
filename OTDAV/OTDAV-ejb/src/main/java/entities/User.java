@@ -8,7 +8,7 @@ import javax.persistence.*;
  *
  */
 @Entity
-
+// commit
 public class User implements Serializable {
 
 	@Id

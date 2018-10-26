@@ -2,10 +2,13 @@
     <wb-module deploy-name="OTDAV-ear">
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
         <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
-        <dependent-module archiveName="OTDAV-web.war" deploy-path="/" handle="module:/classpath/var/M2_REPO/tn/esprit/OTDAV-web/0.0.1-SNAPSHOT/OTDAV-web-0.0.1-SNAPSHOT.war">
+        <dependent-module archiveName="OTDAV-web.war" deploy-path="/" handle="module:/resource/OTDAV-web/OTDAV-web">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="OTDAV-ejb.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/tn/esprit/OTDAV-ejb/0.0.1-SNAPSHOT/OTDAV-ejb-0.0.1-SNAPSHOT.jar">
+        <dependent-module archiveName="OTDAV-ejb.jar" deploy-path="/" handle="module:/resource/OTDAV-ejb/OTDAV-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="primefaces.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/primefaces/primefaces/5.3/primefaces-5.3.jar">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>
