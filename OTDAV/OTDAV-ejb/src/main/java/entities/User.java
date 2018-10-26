@@ -1,7 +1,12 @@
 package entities;
 
+
+
 import java.io.Serializable;
 import javax.persistence.*;
+
+import entities.AccountStatus;
+import entities.Role;
 
 /**
  * Entity implementation class for Entity: User

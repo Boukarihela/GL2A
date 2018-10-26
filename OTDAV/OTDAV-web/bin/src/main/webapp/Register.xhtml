@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+<head> </head>
+<body>
+
+<center>
+<h1>REGISTER NOW</h1>
+<h:form>
+<h:panelGrid columns="2">
+<h:outputText value="nom" />
+<h:inputText value="#{userBean.nom}" />
+<h:outputText value="prenom" />
+<h:inputText value="#{userBean.prenom}" />
+<h:outputText value="cin" />
+<h:inputText value="#{userBean.cin}" />
+<h:outputText value="raison sociale" />
+<h:inputText value="#{userBean.raison_sociale}" />
+<h:outputText value="telephone" />
+<h:inputText  value="#{userBean.tel}" />
+<h:outputText value="fax" />
+<h:inputText value="#{userBean.fax}" />
+<h:outputText value="adresse postale" />
+<h:inputText value="#{userBean.adresse_postale}" />
+<h:outputText value="email" />
+<h:inputText value="#{userBean.email}" />
+<h:outputText value="mot de passe" />
+<h:inputSecret  value="#{userBean.mdp}" />
+<h:outputText value="vous etes "/>
+<h:selectOneMenu value="#{userBean.role}">
+<f:selectItem itemLabel="selectionner votre role"/>
+<f:selectItems value="#{data.roles}"/>
+</h:selectOneMenu>
+ <h:commandButton action="#{userBean.addUser()}" value="Register Now " ></h:commandButton>
+</h:panelGrid>
+</h:form>
+</center>
+</body>
+</html>

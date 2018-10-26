@@ -12,8 +12,6 @@ import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 //import org.mindrot.jbcrypt.BCrypt;
 import entities.*;
-
-
 import interfaces.UserServiceRemote;
 
 @Stateless

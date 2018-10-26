@@ -15,7 +15,7 @@ import services.UserServices;
 @ManagedBean
 
 public class UserBean {
-	
+	/*jjjjjjjjj*/
 	private int cin ; 
 	private int id ; 
 	private String Raison_sociale ; 
