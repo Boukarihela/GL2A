@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<body>
+<h:form>
+<h:dataTable value="#{userBean.users}" var="user" border="1">
+<h:column>
+<f:facet name="header">
+<h:outputText value="identifiant " />
+</f:facet>
+<h:outputText value="#{user.id}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="cin" />
+</f:facet>
+<h:outputText value="#{user.cin}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="email" />
+</f:facet>
+<h:outputText value="#{user.email}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="nom" />
+</f:facet>
+<h:outputText value="#{user.nom}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="prenom" />
+</f:facet>
+<h:outputText value="#{user.prenom}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="adresse" />
+</f:facet>
+<h:outputText value="#{user.adresse_postale}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="email" />
+</f:facet>
+<h:outputText value="#{user.email}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="fax" />
+</f:facet>
+<h:outputText value="#{user.fax}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="telephone" />
+</f:facet>
+<h:outputText value="#{user.tel}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="role" />
+</f:facet>
+<h:outputText value="#{user.role}" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="Actif" />
+</f:facet>
+<h:outputText value="#{user.isActif == true ? 'Oui' :'Non'}" />
+</h:column>
+
+
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="valider" />
+</f:facet>
+
+<h:commandButton action="#{userBean.confirmUsersByAdmin(user.id)}"  value="valider" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="supprimer " />
+</f:facet>
+
+<h:commandButton action="#{userBean.deleteUser(user.id)}"  value="supprimer" />
+</h:column>
+
+<h:column>
+<f:facet name="header">
+<h:outputText value="modifier" />
+</f:facet>
+
+<h:commandButton action="#{userBean.confirmUsersByAdmin(user.id)}"  value="modifier" />
+</h:column>
+</h:dataTable>
+
+</h:form>
+
+</body>
+</html>
